@@ -38,13 +38,7 @@ Features
 * When started with a coin deamon that hasn't finished syncing to the network it shows the blockchain download progress and initializes once synced
 
 #### Hashing algorithms supported:
-* ✓ __Equihash48_5__
-* ✓ __Equihash96_3__
-* ✓ __Equihash96_5__
-* ✓ __Equihash144_5__
-* ✓ __Equihash192_7__
-* ✓ __Equihash200_9__
-
+* ✓ __Equihash__ (Zclassic, Zcash)
 
 Requirements
 ------------
@@ -66,7 +60,7 @@ npm update
 
 Create the configuration for your coin:
 
-Possible options for `algorithm`: *equihash48_5, equihash96_3, equihash96_5, Equihash144_5, equihash192_7, equihash200_9*.
+Possible options for `algorithm`: *equihash*.
 
 ```javascript
 var myCoin = {
@@ -86,22 +80,22 @@ var myCoin = {
 };
 ```
 
-If you are an equihash (n=200, k=9) coin that doesn't have any founder's rewards,
+If you are an equihash coin that doesn't have any founder's rewards,
 
 ```javascript
 var myCoin = {
     "name": "Zclassic",
     "symbol": "ZCL",
-    "algorithm": "equihash200_9",
+    "algorithm": "equihash",
 };
 ```
 
-If you are using an equihash (n=200, k=9) coin that has founder's rewards, you need to include details about the FR system,
+If you are using an equihash coin that has founder's rewards, you need to include details about the FR system,
 ```javascript
 var myCoin = {
     "name": "zcash_testnet",
     "symbol": "taz",
-    "algorithm": "equihash200_9",
+    "algorithm": "equihash",
 
     "payFoundersReward": true,
     "percentFoundersReward": 20,
@@ -364,7 +358,6 @@ Credits
 * [viperaus](//github.com/viperaus/stratum-mining) - scrypt adaptions to python code
 * [ahmedbodi](//github.com/ahmedbodi/stratum-mining) - more algo adaptions to python code
 * [steveshit](//github.com/steveshit) - ported X11 hashing algo from python to node module
-* [litecoinz](//github.com/litecoinz-project) - add equihash48_5, equihash96_3, equihash96_5 and equihash192_7 support
 
 
 Donations
