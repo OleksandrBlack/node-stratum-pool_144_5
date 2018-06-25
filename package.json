@@ -25,10 +25,10 @@
     "main": "lib/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/OleksandrBlack/node-stratum-pool_144_5.git"
+        "url": "https://github.com/OleksandrBlack/node-stratum-pool_144_5.git#snowgem"
     },
     "dependencies": {
-        "equihashverify": "git+https://github.com/OleksandrBlack/equihashverify.git",
+        "equihashverify": "git+https://github.com/OleksandrBlack/equihashverify.git#snowgem",
         "bignum": "*",
         "base58-native": "*",
         "async": "*",
